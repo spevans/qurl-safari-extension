@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>DefaultValue</key>
+		<true/>
+		<key>Key</key>
+		<string>showbadge</string>
+		<key>Title</key>
+		<string>Show Icon Badge</string>
+		<key>Type</key>
+		<string>CheckBox</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<real>1</real>
+		<key>Key</key>
+		<string>buttonmode</string>
+		<key>Title</key>
+		<string>Toolbar Icon</string>
+		<key>Titles</key>
+		<array>
+			<string>Loads next URL in queue</string>
+			<string>Shows all URLs in queue</string>
+		</array>
+		<key>Type</key>
+		<string>RadioButtons</string>
+		<key>Values</key>
+		<array>
+			<real>1</real>
+			<real>2</real>
+		</array>
+	</dict>
+</array>
+</plist>

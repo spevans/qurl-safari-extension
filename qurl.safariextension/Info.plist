@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Simon Evans</string>
+	<key>CFBundleDisplayName</key>
+	<string>Q-URL</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.si.qurl</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.1</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.1</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Context Menu Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>qurl</string>
+				<key>Identifier</key>
+				<string>qurl</string>
+				<key>Title</key>
+				<string>Queue URL</string>
+			</dict>
+		</array>
+		<key>Global Page</key>
+		<string>qurl.html</string>
+		<key>Toolbar Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>qurlbutton</string>
+				<key>Identifier</key>
+				<string>qurlbutton</string>
+				<key>Image</key>
+				<string>Qurl Icon.png</string>
+				<key>Label</key>
+				<string>Next queued URL</string>
+				<key>Tool Tip</key>
+				<string>Load next URL in queue</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict>
+			<key>Start</key>
+			<array>
+				<string>qurl.js</string>
+			</array>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>Queues URLs for later reading</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
+	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://si.org/safari/extensions/qurl/update.plist</string>
+	<key>Website</key>
+	<string>http://homepage.mac.com/spse/safari/extensions/qurl</string>
+</dict>
+</plist>
