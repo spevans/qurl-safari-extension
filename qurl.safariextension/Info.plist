@@ -28,7 +28,7 @@
 			</dict>
 		</array>
 		<key>Global Page</key>
-		<string>qurl.html</string>
+		<string>global.html</string>
 		<key>Toolbar Items</key>
 		<array>
 			<dict>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>Start</key>
 			<array>
-				<string>qurl.js</string>
+				<string>injected.js</string>
 			</array>
 		</dict>
 	</dict>
@@ -70,8 +70,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://si.org/safari/extensions/qurl/update.plist</string>
+	<string>http://homepage.mac.com/spse/safari/qurl/update.plist</string>
 	<key>Website</key>
-	<string>http://homepage.mac.com/spse/safari/extensions/qurl</string>
+	<string>http://homepage.mac.com/spse/safari/qurl</string>
 </dict>
 </plist>

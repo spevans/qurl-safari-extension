@@ -95,6 +95,7 @@ safari.application.addEventListener("message", messageHandler, false);
             if(safari.extension.settings.buttonmode == 1) {
                 var next = urlQueue.shift();
                 safari.application.activeBrowserWindow.activeTab.url = next.href;
+                updatedQueue();
             } else {
                 if(urlPage == null || urlPage.browserWindow === undefined) {
                     urlPage = safari.application.activeBrowserWindow.openTab("foreground");
