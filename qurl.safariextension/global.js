@@ -26,7 +26,6 @@ safari.application.addEventListener("message", messageHandler, false);
     }
 
 
-
     function messageHandler(event) {
         if(event.name === "sendQueue")
             event.target.page.dispatchMessage("URLQueue", urlQueue);
@@ -46,17 +45,20 @@ safari.application.addEventListener("message", messageHandler, false);
         if(event.command !== "qurl")
             return;
 
+        var ui = null;
         try {
-            var ui = event.userInfo;
-            if(ui === undefined || ui == null) {
-                event.target.disabled = true;
-            } else {
-                event.target.disabled = false;
-            }
+            ui = event.userInfo;
         } catch(e) {
+            ui = null;
+        }
+
+        if(ui === undefined || ui == null || ui.href === undefined) {
             event.target.disabled = true;
+        } else {
+            event.target.disabled = false;
         }
     }
+
 
     function qURLCommand(event) {
         if(event.command !== "qurl")
@@ -70,7 +72,6 @@ safari.application.addEventListener("message", messageHandler, false);
                 urlPage.page.dispatchMessage("URLQueue", urlQueue);
         } catch(e) {
         }
-
     }
 
 

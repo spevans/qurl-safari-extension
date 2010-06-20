@@ -3,25 +3,32 @@
 document.addEventListener("contextmenu", contextMenu, false);
 
 function contextMenu(event) {
+    var ui = { curpage: document.URL, title: document.title };
+
     var el = document.elementFromPoint(event.clientX, event.clientY);
     if(el != null) {
         if(el.tagName != 'A' && el.parentElement != null)
             el = el.parentElement;
 
         if(el.tagName == 'A' && el.href != '') {
-            var name = (el.textContent.length <= 1) ? el.href : el.textContent;
-            safari.self.tab.setContextMenuEventUserInfo(event, { href: el.href, name: name });
-            return;
+            ui.name = (el.textContent.length <= 1) ? el.href : el.textContent;
+            ui.href = el.href;
         }
     }
 
-    var sel = window.parent.getSelection().toString();
-    sel = sel.replace(/^\s+|\s+$/g,"");
-    if(sel != '') {
-        // Add in url detection
-        safari.self.tab.setContextMenuEventUserInfo(event, { href: sel, name: sel});
-        return;
-    }
+    if(ui.href === undefined) {
+        var sel = window.parent.getSelection().toString();
+        sel = sel.replace(/^\s+|\s+$/g, '');
 
-    safari.self.tab.setContextMenuEventUserInfo(event, null);
+        // TODO: Add in better url detection        
+        if(sel.match(/^(http?s:\/\/|www\.)(\S+)$/)) {
+            ui.name = sel;
+            if(sel.match(/^https?:\/\//))
+                ui.href = sel;
+            else 
+                ui.href = 'http://' + sel;
+
+        }
+    }
+    safari.self.tab.setContextMenuEventUserInfo(event, ui);
 }
