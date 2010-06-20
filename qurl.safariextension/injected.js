@@ -21,7 +21,7 @@ function contextMenu(event) {
         sel = sel.replace(/^\s+|\s+$/g, '');
 
         // TODO: Add in better url detection        
-        if(sel.match(/^(http?s:\/\/|www\.)(\S+)$/)) {
+        if(sel.match(/^(https?:\/\/|www\.)(\S+)$/)) {
             ui.name = sel;
             if(sel.match(/^https?:\/\//))
                 ui.href = sel;
