@@ -11,6 +11,9 @@ safari.application.addEventListener("message", messageHandler, false);
     var urlQueue = safari.extension.settings.urlQueue || [];
 
     function updatedQueue() {
+        if(urlPage != null)
+            urlPage.page.dispatchMessage("URLQueue", urlQueue);
+
         safari.extension.settings.urlQueue = urlQueue;
         for(var i = 0; i < safari.extension.toolbarItems.length; i++) {
             safari.extension.toolbarItems[i].disabled = !urlQueue.length;
@@ -29,7 +32,6 @@ safari.application.addEventListener("message", messageHandler, false);
             if(idx >= 0 && idx < urlQueue.length) {
                 urlQueue.splice(idx, 1);
                 updatedQueue();
-                event.target.page.dispatchMessage("URLQueue", urlQueue);
             }
         }
     }
@@ -66,8 +68,6 @@ safari.application.addEventListener("message", messageHandler, false);
                 }
                 urlQueue.push(ui);
                 updatedQueue();
-                if(urlPage != null)
-                    urlPage.page.dispatchMessage("URLQueue", urlQueue);
             } catch(e) {
             }
         } else if(event.command === 'qurlbutton' && urlQueue.length > 0) {
