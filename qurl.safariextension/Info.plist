@@ -26,6 +26,14 @@
 				<key>Title</key>
 				<string>Queue URL</string>
 			</dict>
+			<dict>
+				<key>Command</key>
+				<string>qpage</string>
+				<key>Identifier</key>
+				<string>qpage</string>
+				<key>Title</key>
+				<string>Queue Current Page</string>
+			</dict>
 		</array>
 		<key>Global Page</key>
 		<string>global.html</string>
