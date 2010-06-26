@@ -3,7 +3,10 @@
 document.addEventListener("contextmenu", contextMenu, false);
 
 function contextMenu(event) {
-    var ui = { curpage: document.URL, title: document.title };
+    var ui = { date: new Date(),
+               curpage: document.URL, 
+               title: document.title
+             };
 
     var el = document.elementFromPoint(event.clientX, event.clientY);
     if(el != null) {
