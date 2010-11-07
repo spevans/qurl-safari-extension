@@ -11,9 +11,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.4</string>
+	<string>1.0.5</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.4</string>
+	<string>1.0.5</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Context Menu Items</key>
@@ -78,8 +78,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://homepage.mac.com/spse/safari/qurl/update.plist</string>
+	<string>http://si.org/safari/qurl/update.plist</string>
 	<key>Website</key>
-	<string>http://homepage.mac.com/spse/safari/qurl</string>
+	<string>http://si.org/safari/qurl</string>
 </dict>
 </plist>
