@@ -1,6 +1,6 @@
-function startUp(evant) {
+function startUp(event) {
     // if page is from the cache, reload it else we dont receive messages anymore
-    if(event.persisted)
+    if(event && event.persisted)
         window.location.reload(); 
 
     safari.self.addEventListener("message", messageHandler, false);
